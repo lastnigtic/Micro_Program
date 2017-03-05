@@ -1,0 +1,18 @@
+<import src="../movie-instruction/movie-instruction.wxml" />
+<template name="movie-list">
+  <view class="movie-list-container">
+    <view class="movie-list-head">
+      <text class="movie-list-head-left">{{movieHead}}</text>
+      <view class="movie-list-head-right" data-moviehead="{{movieHead}}"
+        catchtap = "onMoreMovie">
+        <text class="movie-list-head-right-text">更多</text>
+        <image class="movie-list-more" src="/data/icon/more.png"></image>
+      </view>
+    </view>
+    <view class="movie-list-item">
+      <block wx:for="{{movies}}">
+        <template is="movie-instruction" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>
+</template>

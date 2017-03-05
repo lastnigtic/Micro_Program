@@ -1,0 +1,14 @@
+<template name="music-item">
+  <view class="MusicItemContainer">
+    <image wx:if="{{index != playId}}" class="MusicState"       
+    src="/data/icon/play.png" 
+    bindtap="playMusic" data-idx="{{index}}"></image>
+    <image wx:else class="MusicState" 
+    src="/data/icon/pause.png" 
+    bindtap="pauseMusic" data-idx="{{index}}"></image>
+    <view class="MusicText">
+      <text class="MusicTitle">{{title}}</text>
+      <text class="MusicDuration">{{duration}}</text>
+    </view>
+  </view>
+</template>

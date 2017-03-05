@@ -1,0 +1,45 @@
+@import '../movie-instruction/movie-instruction.wxss';
+.movie-list-container {
+  width:100%;
+  display: flex;
+  background: white;
+  flex-direction:column;
+  box-sizing: border-box;
+  margin-bottom:30rpx;
+}
+
+/*-----------------------顶部-------------------*/
+.movie-list-head{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+  height:80rpx;
+}
+.movie-list-head-left{
+  padding-left:20rpx;
+  font-size:30rpx;
+  line-height: 80rpx;
+  font-weight:500;
+}
+.movie-list-head-right{
+  font-size:30rpx;
+  margin-right:20rpx;
+}
+.movie-list-head-right-text{
+  margin:0 10rpx;
+  line-height: 80rpx;
+  color:#405f80;
+  font-weight:500;
+}
+.movie-list-more{
+  width:20rpx;
+  height:20rpx;
+}
+
+/*-----------------------列表内容--------------------*/
+.movie-list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

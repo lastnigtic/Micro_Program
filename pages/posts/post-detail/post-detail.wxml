@@ -1,0 +1,19 @@
+<view class="container">
+  <image class="article_pic" src="{{postDetail.content_img}}"></image>
+  <view class="mask"></view>
+  <image class="article_music {{isplaying == true ? 'active':''}}" src="http://download.easyicon.net/png/14518/48/"  catchtap="onMusic"></image>
+  <view class="author-date">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text class="author">{{userInfo.nickName}}</text>
+    <text class="post-word">发表于：</text>
+    <text class="date">{{postDetail.date}}</text>
+  </view>
+  <text class="title">{{postDetail.title}}</text>
+  <view class="share">
+    <image class="share_icon" catchtap="onShare" src="icon/share.png"></image>
+    <image catchtap="onCollection" wx:if="{{collected}}" class="collect_icon" src="icon/collect.png"></image>
+    <image wx:else catchtap="onCollection" class="collect_icon" src="icon/collect-anti.png"></image>
+    <view class="line"></view>
+  </view>
+  <text class="content">{{postDetail.content}}</text>
+</view>

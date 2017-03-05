@@ -1,0 +1,104 @@
+.container {
+  height: 100%;
+  width:100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  position:relative;
+}
+.article_pic{
+  width:100%;
+  height:500rpx;
+  overflow:visible;
+}
+.mask{
+  position:absolute;
+  width:100%;
+  height:500rpx;
+  background:rgba(0,0,0,0.2);
+}
+.article_music{
+  position:absolute;
+  width:100rpx;
+  height:100rpx;
+  margin:200rpx 0 0 350rpx;
+}
+.article_music.active{
+  animation: cd_rotate 1s linear infinite;
+}
+@keyframes cd_rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  0%{
+    transform: rotate(180deg);
+  }
+  0%{
+    transform: rotate(360deg);
+  }
+  0%{
+    transform: rotate(-180deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+/*-----------页头------------------*/
+.author-date{
+  width:100%;
+  flex-direction: row;
+}
+.author-date image{
+  border-radius:100%;
+  width:60rpx;
+  height:60rpx;
+  margin:10rpx 20rpx;
+  vertical-align: middle;
+}
+.author,.date{
+  font-size:35rpx;
+  font-weight:400;
+  vertical-align: middle;
+  color:lightgrey;
+  margin:0 20rpx;
+}
+.post-word{
+  font-size:25rpx;
+  color:darkgrey;
+}
+/*----------标题----------------*/
+.title{
+  font-size:55rpx;
+  font-weight:600;
+  text-align: center;
+  margin:20rpx 0 0 0;
+}
+/*-----------分享--------------------*/
+.share image{
+  float:right;
+  margin:10rpx 30rpx 10rpx 0;
+  position:relative;
+  z-index:5;
+}
+.share_icon{
+  width:80rpx;
+  height:80rpx;
+}
+.collect_icon{
+  width:61.5rpx;
+  height:80rpx;
+}
+.share .line{
+  background:lightgrey;
+  width:580rpx;
+  height:1px;
+  position:absolute;
+  margin:48rpx 0 0 100rpx;
+  z-index:1;
+}
+/*------------正文部分---------------*/
+.content{
+  font-size:35rpx;
+  font-weight:300;
+  text-align: center;
+}

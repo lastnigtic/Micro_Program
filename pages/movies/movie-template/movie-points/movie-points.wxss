@@ -1,0 +1,18 @@
+.movie-points-container {
+  width:200rpx;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin:10rpx 10rpx 20rpx 10rpx;
+}
+ .movie-points-star{
+  align-items: center;
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.movie-points-text{
+  padding-left:10rpx;
+  font-size:25rpx;
+  line-height: 20rpx;
+}

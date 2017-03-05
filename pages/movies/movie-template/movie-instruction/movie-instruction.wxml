@@ -1,0 +1,8 @@
+<import src="../movie-points/movie-points.wxml" />
+<template name="movie-instruction">
+  <view class="movie-instruction-container" catchtap = "onMovieTap" data-movieId="{{movieId}}">
+    <image src="{{images}}" class="movie-instruction-img"></image>
+    <text class="movie-instruction-text">{{title}}</text>
+    <template is="movie-points" data="{{stars:stars,points:average}}"/>
+  </view>
+</template>

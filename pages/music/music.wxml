@@ -1,0 +1,22 @@
+<import src="music-template/music-item/music-item.wxml" />
+<view class="container">
+  <image src="{{musicHeadPic}}" class="MusicHeadPic" mode="aspectFill" />
+  <view class="MusicHead">
+    <text class="ListDescription">{{ListDescription}}</text>
+  </view>
+  <view class="search">
+    <icon type="search" size="25" color="#405f80" />
+    <input type="text" placeholder="请输入歌单的ID号" 
+    bindblur="onMusicSearch" value="{{searchValue}}"></input>
+  </view>
+  <view wx:if="{{location == 'local'}}">
+    <block wx:for="{{musicLists}}">
+      <template is="music-item" data="{{index:index,playId:playId,...item}}" />
+    </block>
+  </view>
+  <view wx:if="{{location == 'search'}}">
+    <block wx:for="{{musicLists}}">
+      <template is="music-item" data="{{index:index,playId:playId,...item}}" />
+    </block>
+  </view>
+</view>

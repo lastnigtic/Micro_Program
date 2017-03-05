@@ -1,0 +1,45 @@
+.con{
+    width:100%;
+    box-sizing:border-box;
+    background-color:white;
+    margin-top:20rpx;
+    border-top:1rpx solid #ededed;
+    border-bottom:1rpx solid #ededed;
+    border-radius: 5rpx;
+}
+.con-head{
+    display:flex;
+    justify-content: flex-start;
+    border-bottom:1px solid #dadada;
+    font-size:40rpx;
+    line-height:80rpx;
+}
+.con-head image{
+    margin:20rpx 20rpx;
+    border-radius:100%;
+    width:60rpx;
+    height:60rpx;
+}
+.con-inn{
+    text-align:center;
+}
+.con-inn-pic{
+    width:100%;
+}
+.con-inn-er{
+    font-size:30rpx;
+    line-height:100rpx;
+}
+.con-bot{
+    display:flex;
+    justify-content: flex-start;
+    font-size:25rpx;
+    line-height:70rpx;
+    border-top:1rpx solid #dadada;
+    height:70rpx;
+}
+.con-bot-icon{
+    width:50rpx;
+    height:50rpx;
+    margin:10rpx 20rpx;
+}

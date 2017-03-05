@@ -1,0 +1,18 @@
+<import src="post-item/post-item.wxml" />
+<view class="container">
+
+  <!--************************滚动图片************************-->
+  <swiper indicator-dots="true" autoplay="true" interval="2000">
+    <swiper-item wx:for="{{swiper}}">
+      <image src="{{item.content_img}}" catchtap="swiperDetail" 
+      data-swiperId="{{item.postId}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!--************************主题内容************************-->
+  <block wx:for="{{posts}}" wx:for-item="post">
+    <view catchtap="postDetail" data-postId="{{post.postId}}">
+      <template is="postItem" data="{{post:post,userInfo:userInfo}}"/>
+    </view>
+  </block>
+</view>

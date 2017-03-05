@@ -1,0 +1,6 @@
+@import '../movie-instruction/movie-instruction.wxss';
+.movie-group-container{
+    width:100%;
+    float:left;
+    height:1400rpx;
+}

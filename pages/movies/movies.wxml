@@ -1,0 +1,16 @@
+<import src="movie-template/movie-list/movie-list.wxml" />
+<import src="movie-template/movie-group/movie-group.wxml"/>
+  <view class="search">
+    <icon type="search"  size="20" color="#405f80"/>
+    <input type="text" placeholder="请输入电影名称" bindfocus = "onBindFocus"
+    bindblur="onBindBlur"/>
+    <icon type="clear"  wx:if="{{searchPannelShow}}" size="20" color="#405f80" catchtap="cancelSearch"/>
+  </view>
+<view class="container" wx:if="{{containerShow}}">
+  <template is="movie-list" data="{{...inTheater}}" />
+  <template is="movie-list" data="{{...comingSoon}}" />
+  <template is="movie-list" data="{{...top250}}" />
+</view>
+<view class="search-pannel" wx:if="{{searchPannelShow}}">
+  <template is = "movie-more" data="{{...searchResult}}"/>
+</view>

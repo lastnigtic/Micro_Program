@@ -1,0 +1,38 @@
+<template name = "postItem">
+<view class="con">
+   <view class="con-head">
+     <image src="{{userInfo.avatarUrl}}"></image>
+     <text>{{post.date}}</text>
+   </view> 
+   <view class="con-inn">
+     <text class="con-inn-head" >{{post.title}}</text>
+     <image class="con-inn-pic" src="{{post.content_img}}"></image>
+     <text class="con-inn-er">{{post.summary}}</text>
+   </view>  
+   <view class="con-bot">
+     <image class="con-bot-icon" src="images/star.png"></image>
+     <text>{{post.star}}</text>
+     <image class="con-bot-icon" src="images/like.png"></image>
+     <text>{{post.like}}</text>
+   </view>
+  </view>
+</template>
+<!--****************详情页面模板***************-->
+<template name="postDetail">
+<view class="container">
+    <image  class="article_pic" src="{{head_pic}}"></image>    
+    <view class="author-date">
+        <image src="{{userInfo.avatarUrl}}"></image>
+        <text class="author">{{author}}</text>
+        <text class="post-word">发表于：</text>
+        <text class="date">{{date}}</text>
+    </view>
+    <text class="title">{{title}}</text>
+    <view class="share">
+        <image src="http://download.easyicon.net/png/1200691/48/ "></image>
+        <image src="http://download.easyicon.net/png/1200637/48/"></image>
+        <view class="line"></view>
+    </view>
+    <text class="content">{{content}}</text>
+</view>
+</template>
